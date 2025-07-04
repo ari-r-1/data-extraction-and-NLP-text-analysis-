@@ -1,0 +1,86 @@
+Title: Instructions for Data Extraction and NLP Analysis 
+
+---
+Instructions Documentation
+---
+
+1. How I Approached the Solution:
+
+The project is divided into two major parts:
+
+1. Data Extraction:
+   - Read `URL_ID` and `URL` from `Input.xlsx`
+   - Used Python libraries (`requests` and `BeautifulSoup`) to scrape the article's title and body
+   - Skipped irrelevant content like headers, footers, or navigation bars
+
+2. Text Analysis:
+   - Cleaned the extracted text using custom stopword files from the `StopWords/` directory
+   - Used `positive-words.txt` and `negative-words.txt` to identify and score sentiment-related words
+   - Calculated:
+     - POSITIVE SCORE
+     - NEGATIVE SCORE
+     - POLARITY SCORE
+     - SUBJECTIVITY SCORE
+     - WORD COUNT
+3. Word Count:
+   - Tokenized text using nltk.word_tokenize.
+   - Counted cleaned words as WORD COUNT.
+
+Readability metrics like FOG Index, Complex Word Count, Syllables per Word, and others mentioned in Text Analysis.docx were planned but not implemented in this version in order to focus on the core sentiment analysis metrics due to time constraints.
+
+These additional metrics can be easily integrated into the same pipeline using text tokenization, sentence segmentation, and standard readability formulas, if required.
+
+- Output was saved in `Output.xlsx` following the `Output Data Structure.xlsx` format
+
+---
+
+2. How to Run the Python Script
+
+### Required Files (same folder as `main.py`):
+- `Input.xlsx`
+- `positive-words.txt`
+- `negative-words.txt`
+- `StopWords/` folder (containing all stopword `.txt` files)
+
+### Option 1: Run Locally
+1. Open terminal and go to the project folder
+2. Install dependencies:
+   pandas
+   openpyxl
+   nltk
+   requests
+   beautifulsoup4
+
+
+### Option 2: Run in Google Colab
+1. Upload:
+- `main.py`
+- `Input.xlsx`
+- `positive-words.txt`
+- `negative-words.txt`
+2. Run the script step-by-step
+3. Output will be saved as `Output.xlsx`
+
+---
+
+3. Dependencies Required
+
+## Dependencies
+
+You must have Python 3.x and the following packages installed:
+
+# Required core packages
+pandas              # For reading/writing Excel and handling data
+openpyxl            # For reading/writing .xlsx files with pandas
+nltk                # For tokenization and stopword handling
+beautifulsoup4      # For parsing HTML content from web pages
+requests            # For sending HTTP requests to URLs
+
+
+import nltk
+nltk.download('punkt')
+
+
+```bash
+pip install pandas openpyxl nltk beautifulsoup4 requests
+
