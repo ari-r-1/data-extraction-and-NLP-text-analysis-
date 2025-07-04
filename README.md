@@ -23,6 +23,7 @@ Please ensure the following files are available in the same directory before run
 You must have Python 3.x and the following packages installed:
 
 ## Required core packages
+
 pandas              # For reading/writing Excel and handling data
 openpyxl            # For reading/writing .xlsx files with pandas
 nltk                # For tokenization and stopword handling
