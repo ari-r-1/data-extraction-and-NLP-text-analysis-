@@ -1,4 +1,4 @@
-### 🧠 Data Extraction And NLP Analysis
+### 🧠 Data Extraction And NLP Text Analysis
 
 ## 📌 Objective
 
